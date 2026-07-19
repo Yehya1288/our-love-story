@@ -1281,3 +1281,231 @@ width:100%;
 /* ==========================
    THE END
 ========================== */
+/* =========================
+   WEDDING COUNTDOWN GLASS
+========================= */
+
+.countdown-container{
+
+width:90%;
+max-width:650px;
+
+margin:50px auto;
+
+padding:35px 25px;
+
+background:
+rgba(255,255,255,0.15);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:
+1px solid rgba(255,255,255,0.35);
+
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.18);
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+
+.countdown-container h2{
+
+color:white;
+
+font-size:28px;
+
+margin-bottom:25px;
+
+font-family:serif;
+
+}
+
+
+
+.heart-pulse{
+
+font-size:65px;
+
+animation:heartBeat 1s infinite;
+
+}
+
+
+
+@keyframes heartBeat{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+25%{
+
+transform:scale(1.25);
+
+}
+
+
+40%{
+
+transform:scale(1);
+
+}
+
+
+60%{
+
+transform:scale(1.15);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+#countdown{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.time-box{
+
+min-width:95px;
+
+padding:20px 10px;
+
+
+background:
+
+rgba(255,255,255,0.22);
+
+
+border-radius:20px;
+
+
+border:
+
+1px solid rgba(255,255,255,0.4);
+
+
+backdrop-filter:blur(10px);
+
+
+color:white;
+
+
+font-size:38px;
+
+
+font-weight:bold;
+
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.15);
+
+
+animation:
+
+fadeIn .7s ease;
+
+
+}
+
+
+
+.time-box span{
+
+
+display:block;
+
+font-size:15px;
+
+margin-top:8px;
+
+font-weight:normal;
+
+
+}
+
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+.time-box{
+
+min-width:70px;
+
+font-size:28px;
+
+padding:15px 8px;
+
+}
+
+
+.countdown-container h2{
+
+font-size:22px;
+
+}
+
+
+}
