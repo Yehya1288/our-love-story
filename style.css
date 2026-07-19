@@ -1509,3 +1509,84 @@ font-size:22px;
 
 
 }
+/* ==========================
+   VIDEO MEMORY CARD
+========================== */
+
+
+.video-card{
+
+width:100%;
+
+border-radius:25px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.2);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.4);
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.15);
+
+transition:.5s;
+
+}
+
+
+
+.memory-video{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+border-radius:25px;
+
+}
+
+
+
+.video-card:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+box-shadow:
+0 25px 45px rgba(0,0,0,.2);
+
+}
+
+
+
+/* Gallery image improvement */
+
+.memory-img{
+
+border-radius:25px;
+
+cursor:pointer;
+
+transition:.5s;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.memory-img:hover{
+
+transform:
+scale(1.05)
+rotate(2deg);
+
+}
