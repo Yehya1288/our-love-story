@@ -359,3 +359,175 @@ ticking=true;
 
 
 });
+/* =========================
+   WEDDING COUNTDOWN
+========================= */
+
+
+const weddingDate = new Date("2027-07-14 18:00:00");
+
+
+const countdownElement =
+document.getElementById("countdown");
+
+
+
+function updateWeddingCountdown(){
+
+
+const now = new Date();
+
+
+const difference =
+weddingDate - now;
+
+
+
+if(difference <= 0){
+
+
+countdownElement.innerHTML =
+
+`
+<h2>
+❤️ اليوم المنتظر وصل ❤️
+</h2>
+`;
+
+return;
+
+}
+
+
+
+const days = Math.floor(
+
+difference /
+(1000*60*60*24)
+
+);
+
+
+
+const hours = Math.floor(
+
+(difference /
+(1000*60*60))
+%24
+
+);
+
+
+
+const minutes = Math.floor(
+
+(difference /
+(1000*60))
+%60
+
+);
+
+
+
+const seconds = Math.floor(
+
+(difference /
+1000)
+%60
+
+);
+
+
+
+countdownElement.innerHTML = `
+
+
+<div class="time-box">
+
+${days}
+
+<span>
+يوم
+</span>
+
+</div>
+
+
+
+<div class="time-box">
+
+${hours}
+
+<span>
+ساعة
+</span>
+
+</div>
+
+
+
+<div class="time-box">
+
+${minutes}
+
+<span>
+دقيقة
+</span>
+
+</div>
+
+
+
+<div class="time-box">
+
+${seconds}
+
+<span>
+ثانية
+</span>
+
+</div>
+
+
+`;
+
+}
+
+
+
+setInterval(()=>{
+
+
+updateWeddingCountdown();
+
+
+
+const heart =
+document.querySelector(".heart-pulse");
+
+
+if(heart){
+
+
+heart.style.animation="none";
+
+
+setTimeout(()=>{
+
+
+heart.style.animation=
+"heartBeat 1s infinite";
+
+
+},20);
+
+
+}
+
+
+
+},1000);
+
+
+
+updateWeddingCountdown();
